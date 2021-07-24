@@ -2,77 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming soon</title>
-    <link rel="shortcut icon" href="./favicon.png" type="image/png">
-    <!-- reset/init -->
-    <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    <!-- 3rd party css -->
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <!-- component -->
-    <link rel="stylesheet" href="./css/button.css">
-    <link rel="stylesheet" href="./css/clock.css">
-    <link rel="stylesheet" href="./css/form.css">
-    <link rel="stylesheet" href="./css/mouse.css">
-    <link rel="stylesheet" href="./css/progress-bar.css">
-    <link rel="stylesheet" href="./css/toast.css">
-    <!-- custom -->
-    <link rel="stylesheet" href="./css/custom.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Coming soon</title>
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/firebase_configuration.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+  
 </head>
 
 <body>
-    <div class="container hero bg-main-color">
-        <div class="row-short">
-            <img src="./img/coming-soon-logo.png" alt="Logo">
-            <h1>Coming soon</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quisquam fugiat facilis asperiores, quo harum?</p>
-            <div class="clock"></div>
-            <form class="form">
-                <input type="email" placeholder="Email" required data-validation="email">
-                <input type="submit" value="Subscribe now!" class="btn">
-            </form>
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-        </div>
-    </div>
-    <main class="container">
-        <div class="row">
-            <div class="column left">
-                <h2>About startup</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit temporibus labore, <a href="#">Matrox</a> veniam tenetur ea quaerat cumque dolor distinctio.</p>
-            </div>
-            <div class="column right">
-                <h2>Have any question?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo doloribus quisquam <a href="mailto:vardenis@pastelis.xyz">vardenis@pastelis.xyz</a> natus autem dolorem. Eaque, molestias assumenda.</p>
-                <form class="form">
-                    <input type="text" placeholder="Name" data-validation="name">
-                    <input type="email" placeholder="Email" data-validation="email">
-                    <textarea maxlength="1000" placeholder="Message" data-validation="text"></textarea>
-                    <input type="submit" value="Send message" class="btn">
-                </form>
-            </div>
-        </div>
-    </main>
-    <footer class="container bg-main-color">
-        <div class="row">
-            <a href="#" class="btn btn-secondary-color circle fa fa-angle-up"></a>
-        </div>
-        <div class="row-short">
-            <img src="./img/logo-footer.png" alt="matrox logo">
-            <div class="text-trio">
-                <div class="text">Copyright &copy; 2020 <a href="#">Matrox</a></div>
-                <div class="text">All rights reserved</div>
-                <div class="text">Designed by <a href="#">TrendyTheme</a></div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias <a href="#">200+</a> quia consequuntur distinctio libero qui atque incidunt <a href="#">Matrox</a> saepe nemo.</p>
-        </div>
-    </footer>
 
-    <script src="./js/main.js" type="module"></script>
+  <br>
+  <br>
+  <br>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <center>
+          <img src="./img/logo.png" class="mr-3" width="250px" height="25px">
+        </center>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-2 col-lg-1 col-4 mb-2 mb-md-0 timer-box pt-4 pb-4 mr-2">
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-num" name="days">35</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-text">Days</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-1 col-4 mb-2 mb-md-0 timer-box pt-4 pb-4 mr-2">
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-num" name="hours">06</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-text">Hours</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-1 col-4 timer-box pt-4 pb-4 mr-2">
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-num" name="minutes">09</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-text">Minutes</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-1 col-4 timer-box pt-4 pb-4 mr-2">
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-num" name="seconds">25</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="timer-box-text">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 content">
+        <center>
+          <h4>Coming soon. Subscribe for email notifications of future updates.</h4>
+        </center>
+      </div>
+    </div>
+    <div class="row mt-3 text-center">
+      <div class="col-12">
+        <form class="form-inline" style="display: inline" id="notifs-form">
+          <input type="email" class="form-control" id="notifs-form-input" aria-describedby="emailHelp" placeholder="Enter email">
+          <button type="button" class="btn btn-dark mt-2 mt-md-0" id="notifs-form-btn">Get notified</button>
+          <label class="notified-label"></label>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <footer class="text-center page-footer">
+    <div class="pb-4 pt-4">
+      <a href="#" target="_blank">
+        <i class="fab fa-facebook-f mr-3 social-icon"></i>
+      </a>
+
+      <a href="#" target="_blank">
+        <i class="fab fa-twitter mr-3 social-icon"></i>
+      </a>
+
+      <a href="#" target="_blank">
+        <i class="fab fa-instagram mr-3 social-icon"></i>
+      </a>
+
+      <a href="#" target="_blank">
+        <i class="fab fa-snapchat mr-3 social-icon"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="js/require.js" type="text/javascript"></script>
+  <script src="js/countdown.js" type="text/javascript"></script>
+
 </body>
 
 </html>

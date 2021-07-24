@@ -1,25 +1,31 @@
-![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
-![Security Status](https://img.shields.io/security-headers?label=Security&url=https%3A%2F%2Fgithub.com&style=flat-square)<br>
-![Gluten Status](https://img.shields.io/badge/Gluten-Free-green.svg)
-![Eco Status](https://img.shields.io/badge/ECO-Friendly-green.svg)<br>
+# Responsive coming soon page template
 
+A responsive coming soon web page template made with Boostrap 4.
+It can also store subcription email IDs in your Firebase cloud firestore.
 
-# Coming soon
+[Demo](https://aftaab99.github.io/Coming-Soon-Template/)
 
+## Setting up with your own Firebase project
 
-This project is for educational porpuses only. Pull request are welcome, but priority for my real-life friends! Thank you for your cooperation!
+Copy your firebase API credentails and replace the dumpy variable in firebase_configuration.js with your project credentials.
 
-Site published at https://urbbiz.github.io/5-Coming-soon/
+They can be found under Project overview -> web.
+![api configurations](https://github.com/Aftaab99/Coming-Soon-Template/blob/master/img/api_configuration.png)
 
-Design: [Saas-one](https://altrcloud.ru/saasone/index-two)
+Next create a cloud firestore for your project. This can done through the firebase console(Database -> Cloud Firestore).
+Next create a collection called 'Emails'.
 
+![setting up firestore](https://github.com/Aftaab99/Coming-Soon-Template/blob/master/img/setting_firestore1.png)
+![setting up firestore](https://github.com/Aftaab99/Coming-Soon-Template/blob/master/img/setting_firestore2.png)
 
-## Project features
-- responsive design
-- repetitive content is generated/rendered;
-- css animation
-- form validations
-- no AJAX (data sendings)
+## Changing date
 
-## Authors
-[Andrius](https://github.com/urbbiz)<br>
+Currently the countdown timer counts to 30 days since the page was loaded. It can be easily made to count to another date by making a few modifications in 'countdown.js'
+
+Replace
+
+    countDownDate.setDate(countDownDate.getDate() + 30);
+
+with
+
+    countDownDate.setDate('January 17, 2019 03:24:00');
